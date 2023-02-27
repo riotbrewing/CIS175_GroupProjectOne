@@ -42,6 +42,7 @@ public class MainNavServlet extends HttpServlet {
 		if(choice.equals("add_venue"))
 		{
 			//path to page for adding a venue
+			path = "/manage_venue_add.jsp";
 		}
 		else if(choice.equals("edit_venue"))
 		{
