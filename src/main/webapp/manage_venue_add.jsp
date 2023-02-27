@@ -22,8 +22,8 @@
 		<br>
 	</form>
 	<button onclick="window.location.href='index.html'">Return Home</button>
-	<button onclick="window.location.href='manage_venue_edit.jsp'">Edit Venue</button>
-	<button onclick="window.location.href='manage_venue_delete.jsp'">Delete Venue</button>
+	<button onclick="window.location.href='manageVenueListServlet'">Edit Venue</button>
+	<button onclick="window.location.href='manageVenueListServlet'">Delete Venue</button>
 	<br>
 </body>
 </html>

@@ -62,4 +62,15 @@ public class VenueHelper {
 		em.close();
 	}
 	
+	/*
+	 * @ Venue uses the passed in parmeter to search through the database and return the selected object
+	 */
+	public Venue searchForVenueById(int toEdit)
+	{
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		Venue found = em.find(Venue.class, toEdit);
+		em.close();
+		return found;
+	}
 }

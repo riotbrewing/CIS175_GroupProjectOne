@@ -36,6 +36,7 @@ public class MainNavServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String choice = request.getParameter("choice_selector");
+		System.out.println(choice);
 		
 		String path = "/index.html";
 		
@@ -47,10 +48,13 @@ public class MainNavServlet extends HttpServlet {
 		else if(choice.equals("edit_venue"))
 		{
 			//path to page for editing a venue
+			
+			path = "/manageVenueListServlet";
 		}
 		else if(choice.equals("delete_venue"))
 		{
 			//path to page for deleting a venue
+			path = "/manageVenueListServlet";
 		}
 		else if(choice.equals("add_concert"))
 		{
@@ -76,7 +80,7 @@ public class MainNavServlet extends HttpServlet {
 		{
 			//path to page for adding a viewing concerts based on venue
 		}
-		
+		System.out.println(path);
 		getServletContext().getRequestDispatcher(path).forward(request, response);
 	}
 
