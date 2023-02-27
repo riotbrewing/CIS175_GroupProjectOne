@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Event Manager</title>
+<link rel = "stylesheet" href ="styles.css">
+</head>
+<body>
+<h1>Welcome to the event manager</h1>
+
+<form action = "mainNavServlet" method = "post">
+<h2>Select what you would like to do</h2>
+	<input type = "radio" id = "addVenue" name = "choice_selector" value = "add_venue" checked = "checked">
+	<label for = "addVenue">Add A New Venue</label><br>
+	<input type = "radio" id = "editVenue" name = "choice_selector" value = "edit_venue">
+	<label for = "editVenue">Edit An Existing Venue</label><br>
+	<input type = "radio" id = "deleteVenue" name = "choice_selector" value = "delete_venue">
+	<label for = "deleteVenue">Delete An Existing Venue</label><br>
+	<input type = "radio" id = "addConcert" name = "choice_selector" value = "add_concert">
+	<label for = "addConcert">Add A New Concert</label><br>
+	<input type = "radio" id = "editConcert" name = "choice_selector" value = "edit_concert">
+	<label for = "editConcert">Edit An Existing Concert</label><br>
+	<input type = "radio" id = "deleteConcert" name = "choice_selector" value = "delete_concert">
+	<label for = "deleteConcert">Delete An Existing Concert</label><br>
+	<input type = "radio" id = "viewVenues" name = "choice_selector" value = "view_venues">
+	<label for = "viewVenues">View All Of The Venues</label><br>
+	<input type = "radio" id = "viewConcerts" name = "choice_selector" value = "view_concerts">
+	<label for = "viewConcerts">View All Of The Concerts</label><br>
+	<input type = "radio" id = "concertsByVenue" name = "choice_selector" value = "concerts_by_venue">
+	<label for = "concertsByVenue">Edit An Existing Concert</label><br>
+	<br>
+	<button type = "submit" value = "Submit">Submit</button>
+</form>
+</body>
+</html>
