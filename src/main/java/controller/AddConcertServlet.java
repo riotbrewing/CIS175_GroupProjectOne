@@ -44,6 +44,7 @@ public class AddConcertServlet extends HttpServlet {
 		VenueHelper venueDAO = new VenueHelper();
 		//search to see if the location exists and if not add it 
 		Venue concertVenue = venueDAO.searchForVenueByName(venueName);
+		venueDAO.addVenue(concertVenue);
 		String bandName = request.getParameter("addBandName");
 		String bandDescription = request.getParameter("addBandDescription");
 		//catch the input from the date and set a localdate object

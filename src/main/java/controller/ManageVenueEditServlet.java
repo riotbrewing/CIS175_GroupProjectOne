@@ -46,6 +46,8 @@ public class ManageVenueEditServlet extends HttpServlet {
 		venueUpdate.setVenueName(venueName);
 		venueUpdate.setVenueAddress(venueAddress);
 		
+		dao.updateVenue(venueUpdate);
+		
 		getServletContext().getRequestDispatcher("/index.html").forward(request, response);
 	}
 

@@ -85,6 +85,8 @@ public class ManageConcertEditServlet extends HttpServlet {
 		concertUpdate.setBandDescription(bandDescription);
 		concertUpdate.setConcertDate(concertDate);
 		
+		concertDAO.updateConcert(concertUpdate);
+		
 		getServletContext().getRequestDispatcher("/index.html").forward(request, response);
 		
 	}

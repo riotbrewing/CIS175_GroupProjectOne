@@ -102,4 +102,13 @@ public class VenueHelper {
 		
 		return found;
 	}
+	
+	public void updateVenue(Venue toEdit)
+	{
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		em.merge(toEdit);
+		em.getTransaction().commit();
+		em.close();
+	}
 }

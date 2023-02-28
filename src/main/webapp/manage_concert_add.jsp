@@ -24,7 +24,7 @@
 		<br><br>
 	</form>
 	<button onclick="window.location.href='index.html'">Return Home</button>
-	<button onclick="window.location.href=''">Edit Concert</button>
-	<button onclick="window.location.href=''">Delete Concert</button>
+	<button onclick="window.location.href='manageConcertListServlet'">Edit Concert</button>
+	<button onclick="window.location.href='manageConcertListServlet'">Delete Concert</button>
 </body>
 </html>

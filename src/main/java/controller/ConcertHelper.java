@@ -77,5 +77,12 @@ public class ConcertHelper {
 		return found;
 	}
 	
-	
+	public void updateConcert(Concert toEdit)
+	{
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		em.merge(toEdit);
+		em.getTransaction().commit();
+		em.close();
+	}
 }
