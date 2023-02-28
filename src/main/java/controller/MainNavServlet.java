@@ -59,22 +59,27 @@ public class MainNavServlet extends HttpServlet {
 		else if(choice.equals("add_concert"))
 		{
 			//path to page for adding a concert
+			path = "/manage_concert_add.jsp";
 		}
 		else if(choice.equals("edit_concert"))
 		{
 			//path to page for editing a concert
+			path = "/manageConcertListServlet";
 		}
 		else if(choice.equals("delete_concert"))
 		{
 			//path to page for deleting a concert
+			path = "/manageConcertListServlet";
 		}
 		else if(choice.equals("view_venues"))
 		{
 			//path to page for viewing all the venues
+			path = "/manageVenueListServlet";
 		}
 		else if(choice.equals("view_concerts"))
 		{
 			//path to page for viewing all the concerts
+			path = "/manageConcertListServlet";
 		}
 		else if(choice.equals("concerts_by_venue"))
 		{

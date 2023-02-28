@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
@@ -71,6 +72,34 @@ public class VenueHelper {
 		em.getTransaction().begin();
 		Venue found = em.find(Venue.class, toEdit);
 		em.close();
+		return found;
+	}
+	
+	/*
+	 * @Venue search the database for the venue by name, if it does not exist create a new venue with that name
+	 */
+	
+	public Venue searchForVenueByName(String input)
+	{
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		TypedQuery<Venue> typedQuery = em.createQuery("SELECT i FROM Venue i WHERE i.venueName = :selectedVenueName", Venue.class);
+		//sub the parameter with the passed in string
+		typedQuery.setParameter("selectedVenueName", input);
+		//set only one return
+		typedQuery.setMaxResults(1);
+		
+		Venue found;
+		
+		try
+		{
+			found = typedQuery.getSingleResult();
+		}
+		catch(NoResultException e)
+		{
+			found = new Venue(input);
+		}
+		
 		return found;
 	}
 }

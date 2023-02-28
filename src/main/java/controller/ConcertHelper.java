@@ -64,5 +64,18 @@ public class ConcertHelper {
 		em.getTransaction().commit();
 		em.close();
 	}
-
+	
+	/*
+	 * @ Concert uses the passed in parmeter to search through the database and return the selected object
+	 */
+	public Concert searchForVenueById(int toEdit)
+	{
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		Concert found = em.find(Concert.class, toEdit);
+		em.close();
+		return found;
+	}
+	
+	
 }

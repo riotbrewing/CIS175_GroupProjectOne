@@ -34,6 +34,11 @@ public class Venue {
 		this.venueAddress = venueAddress;
 	}
 
+	public Venue(String venueName) {
+		super();
+		this.venueName = venueName;
+	}
+
 	public int getId() {
 		return id;
 	}
