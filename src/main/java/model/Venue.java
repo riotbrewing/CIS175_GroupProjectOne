@@ -3,6 +3,7 @@ package model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -16,8 +17,8 @@ import javax.persistence.Table;
 @Table(name="venue")
 public class Venue {
 	@Id
-	@GeneratedValue
-	@Column(name="ID")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID")
 	private int id;
 	@Column(name = "venue_name")
 	private String venueName;

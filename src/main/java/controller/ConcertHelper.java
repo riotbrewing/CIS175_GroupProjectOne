@@ -85,4 +85,16 @@ public class ConcertHelper {
 		em.getTransaction().commit();
 		em.close();
 	}
+	
+	
+	public List<Concert> viewConcertsByVenue(){
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		@SuppressWarnings("unchecked")
+		List<Concert> concertsByVenue = em.createQuery("SELECT i FROM Concert i").getResultList();
+		return concertsByVenue;
+
+    }
 }
+
+
