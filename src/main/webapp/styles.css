@@ -1,2 +1,86 @@
 @charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css2?family=Phudu:wght@400;wght@700&display=swap');
 
+body
+{
+	background-color: #474241;
+	color: white;
+}
+
+
+.center
+{
+	margin: auto;
+	width: 50%;
+	padding: 20px;
+}
+
+.flex-center
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h1
+{
+	font-family: 'Courier New', monospace;
+	text-align: center;
+	font-size: 3em;
+}
+
+h2
+{
+	font-family: 'Courier New', monospace;
+}
+
+form
+{
+	font-family: 'Courier New', monospace;
+	background-color: #E7E2E1;
+	color: black;
+	border: 2px solid black;
+	border-radius: 15px;
+	margin: auto;
+	width: 50%;
+	padding: 20px;
+}
+
+button
+{
+	background-color: #474241;
+	color: #E7E2E1;
+	font-family: 'Courier New', monospace;
+	padding: 10px;
+	font-size: 1.5em;
+	margin: 10px;
+
+}
+
+button:hover
+{
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+button:active
+{
+	background-color: #E7E2E1;
+	color: black;
+}
+.button2
+{
+	background-color: #E7E2E1;
+	color: black;
+	font-family: 'Courier New', monospace;
+	padding: 10px;
+	font-size: 1.5em;
+	margin: 10px;
+}
+.button2:hover
+{
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.button2:active
+{
+	background-color: #474241;
+	color: #E7E2E1;
+}

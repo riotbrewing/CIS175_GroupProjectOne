@@ -11,19 +11,25 @@
 <style><%@include file = "/styles.css"%></style>
 </head>
 <body>
-	<h1>ADD A NEW VENUE</h1>
+	<h1>Add A New Venue</h1>
 	<form action="addVenueServlet" method="post">
 		<label for="addVenueName">Venue Name:</label> 
 		<input type="text"name="addVenueName" id="addVenueName"><br><br>
 		 <label for="addVenueAddress">Venue Address:</label> 
 		 <input	type="text" name="addVenueAddress" id="addVenueAddress"><br><br>
-		<button type="submit" value="Submit">Submit</button>
+		 <div class = "flex-center">
+		 		<button type="submit" value="Submit">Submit</button>
+		 </div>
+
 		<br>
 		<br>
 	</form>
-	<button onclick="window.location.href='index.html'">Return Home</button>
-	<button onclick="window.location.href='manageVenueListServlet'">Edit Venue</button>
-	<button onclick="window.location.href='manageVenueListServlet'">Delete Venue</button>
+	<div class = "flex-center">
+		<button onclick="window.location.href='index.html'" class = "button2">Return Home</button>
+		<button onclick="window.location.href='manageVenueListServlet'" class = "button2">Edit Venue</button>
+		<button onclick="window.location.href='manageVenueListServlet'" class = "button2">Delete Venue</button>
+	</div>
+
 	<br>
 </body>
 </html>

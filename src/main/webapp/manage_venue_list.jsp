@@ -11,7 +11,9 @@
 <style><%@include file = "/styles.css"%></style>
 </head>
 <body>
+<h1>All Of The Venues</h1>
 <form method = "post" action = "manageVenueServlet">
+	<h2>Make A Selection</h2>
 	<table>
 	<c:forEach items="${requestScope.allVenues }" var = "currentitem" >
 	<tr>
@@ -21,10 +23,15 @@
 	</tr>
 	</c:forEach>
 	</table>
-	<button type = "submit" value = "edit" name = "doThisToItem">Edit</button>
-	<button type = "submit" value = "delete" name = "doThisToItem">Delete</button>
-	<button type = "submit" value = "add" name = "doThisToItem">Add</button>
+		<div class = "flex-center">
+		<button type = "submit" value = "edit" name = "doThisToItem">Edit</button>
+		<button type = "submit" value = "delete" name = "doThisToItem">Delete</button>
+		<button type = "submit" value = "add" name = "doThisToItem">Add</button>
+	</div>
 </form>
-	<button onclick="window.location.href='index.html'">Return Home</button>
+<div class = "flex-center">
+	<button onclick="window.location.href='index.html'" class = "button2">Return Home</button>
+</div>
+
 </body>
 </html>

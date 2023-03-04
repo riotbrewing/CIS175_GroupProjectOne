@@ -8,7 +8,8 @@
 <body>
 <h1>Welcome to the event manager</h1>
 
-<form action = "mainNavServlet" method = "post">
+<div class = "center">
+<form action = "mainNavServlet" method = "post"  class = "center">
 <h2>Select what you would like to do</h2>
 	<input type = "radio" id = "addVenue" name = "choice_selector" value = "add_venue">
 	<label for = "addVenue">Add A New Venue</label><br>
@@ -29,7 +30,10 @@
 	<input type = "radio" id = "concertsByVenue" name = "choice_selector" value = "concerts_by_venue">
 	<label for = "concertsByVenue">Edit An Existing Concert</label><br>
 	<br>
-	<button type = "submit" value = "Submit">Submit</button>
+	<div class = "flex-center">
+		<button type = "submit" value = "Submit" >Submit</button>
+	</div>
 </form>
+</div>
 </body>
 </html>

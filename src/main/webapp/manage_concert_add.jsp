@@ -11,6 +11,7 @@
 <style><%@include file = "/styles.css"%></style>
 </head>
 <body>
+<h1>Add A New Concert</h1>
 	<form action = "addConcertServlet" method = "post">
 		<label for="addLocationName">Venue Name</label>
 		<input type = "text" name = "addLocationName" id = "addLocationName"><br><br>
@@ -20,11 +21,17 @@
 		<input type = "text" name = "addBandDescription" id = "addBandDescription"><br><br>
 		<label for="addConcertDate">Concert Date:</label>
 		<input type = "date" name = "addConcertDate" id = "addConcertDate"><br><br>
-		<button type="submit" value="Submit">Submit</button>
+		<div class ="flex-center">
+			<button type="submit" value="Submit">Submit</button>
+		</div>
+
 		<br><br>
 	</form>
-	<button onclick="window.location.href='index.html'">Return Home</button>
-	<button onclick="window.location.href='manageConcertListServlet'">Edit Concert</button>
-	<button onclick="window.location.href='manageConcertListServlet'">Delete Concert</button>
+	<div class = "flex-center">
+		<button onclick="window.location.href='index.html'" class = "button2">Return Home</button>
+		<button onclick="window.location.href='manageConcertListServlet'" class = "button2">Edit Concert</button>
+		<button onclick="window.location.href='manageConcertListServlet'" class = "button2">Delete Concert</button>
+	</div>
+	
 </body>
 </html>
