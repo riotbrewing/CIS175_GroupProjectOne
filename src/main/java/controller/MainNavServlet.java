@@ -81,9 +81,9 @@ public class MainNavServlet extends HttpServlet {
 			//path to page for viewing all the concerts
 			path = "/manageConcertListServlet";
 		}
-		else if(choice.equals("concerts_by_venue"))
+		else if(choice.equals("concertsByVenue"))
 		{
-			//path to page for adding a viewing concerts based on venue
+			path = "/manageConcertByVenueServlet";
 		}
 		System.out.println(path);
 		getServletContext().getRequestDispatcher(path).forward(request, response);
